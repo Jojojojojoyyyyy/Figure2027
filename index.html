@@ -175,7 +175,7 @@
   .tab{flex:1;border:none;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;color:var(--soft);font:inherit;font-size:.62rem;font-weight:700;cursor:pointer}
   .tab svg{width:21px;height:21px}.tab.on{color:var(--rose)}
   .hl{color:var(--rose)}
- 
+
   .daytotal{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:13px;box-shadow:var(--sh)}
   .daytotal .dth{background:var(--ink);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:9px 14px}
   .daytotal table{width:100%;border-collapse:collapse;font-size:.78rem}
@@ -185,20 +185,20 @@
   .daytotal .food{font-weight:700}
   .daytotal .qty{font-weight:800;color:var(--ind);white-space:nowrap}
   .daytotal .cat{font-size:.64rem;color:var(--soft)}
- 
+
   .accdate{display:flex;align-items:center;gap:8px;padding:8px 14px 10px;border-top:1px solid #F1F4F9;background:#FAFBFE}
   .accdate label{font-size:.68rem;font-weight:700;color:var(--soft)}
   .accdate input[type=date]{border:1.5px solid var(--line);border-radius:9px;padding:7px 9px;font:inherit;font-size:.78rem;font-weight:700;color:var(--ind);background:#fff;flex:1}
   .accdate input[type=date]:focus{outline:none;border-color:var(--ind)}
   .accdate .dateinfo{font-size:.66rem;color:var(--soft);flex:none}
- 
+
   .edbtn{border:none;background:var(--ind-s);color:var(--ind);font:inherit;font-weight:700;font-size:.64rem;padding:3px 9px;border-radius:7px;cursor:pointer;white-space:nowrap;flex:none}
   .edbtn:active{background:var(--ind);color:#fff}
   .editbanner{display:none;background:var(--ind-s);border:1.5px solid var(--ind);border-radius:14px;padding:11px 13px;margin-bottom:11px;font-size:.8rem;color:#2f2f7a}
   .editbanner b{font-weight:800}
   .editbanner.show{display:block}
   .cancelbtn{margin-top:8px;border:1.5px solid var(--ind);background:#fff;color:var(--ind);font:inherit;font-weight:700;font-size:.78rem;padding:7px 14px;border-radius:10px;cursor:pointer}
- 
+
   /* HYROX checklist */
   .hyrox-wrap{padding:12px 14px}
   .hyrox-section{font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:10px 0 6px}
@@ -226,15 +226,15 @@
 </head>
 <body>
 <svg width="0" height="0"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3F6C"/><stop offset="1" stop-color="#7A4DFF"/></linearGradient></defs></svg>
- 
+
 <header><div class="wrap">
   <div class="logo">Figure <b>2027</b></div>
   <div class="streak"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-1 .3-2 .8-2.7C8 9 8 11 8 13a3 3 0 0 0 6 0c0-4-2-7-2-11z"/></svg><span id="streakn">0</span></div>
   <div class="datechip"><div class="dow" id="dow">—</div><div class="dt" id="dt">—</div></div>
 </div></header>
- 
+
 <main class="wrap">
- 
+
 <!-- ===== TODAY ===== -->
 <section id="s-today" class="screen active">
   <div class="card hero">
@@ -242,14 +242,14 @@
     <h2 id="hName">—</h2><div class="pr" id="hPr">—</div>
     <div class="meta" id="hMeta"></div>
   </div>
- 
+
   <div class="sumgrid">
     <div class="sumcard"><div class="ic rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><div class="lbl">Steps today</div><div class="val" id="sumSteps">— <small>target</small></div></div>
     <div class="sumcard"><div class="ic ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="lbl">Sleep last night</div><div class="val" id="sumSleep">—</div></div>
     <div class="sumcard"><div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><div class="lbl">Sleeping HR</div><div class="val" id="sumHR">—</div></div>
     <div class="sumcard"><div class="ic amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="lbl">Days to EVOLT</div><div class="val" id="sumScan">—</div></div>
   </div>
- 
+
   <div class="card" id="quoteCard" style="background:linear-gradient(135deg,#1a1a3e,#3a1a4e);border:none;padding:18px">
     <div style="font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px">Today’s reminder</div>
     <div id="dailyQuote" style="font-size:.95rem;font-weight:600;color:#fff;line-height:1.5;font-style:italic"></div>
@@ -259,10 +259,10 @@
     <div style="font-size:.72rem;font-weight:700;color:var(--soft);margin-bottom:8px">Daily checklist · <span id="compPct" style="color:var(--rose)">0%</span> done today</div>
     <div id="checklist"></div>
   </div>
- 
+
   <div class="note">Tap your boxes as you go and keep the streak alive. <b>iPhone:</b> open in Safari → Share → Add to Home Screen. Everything saves privately on this device — back it up weekly from the Stats tab.</div>
 </section>
- 
+
 <!-- ===== EAT ===== -->
 <section id="s-eat" class="screen">
   <div class="eyebrow">Part 3 · Nutrition</div>
@@ -303,27 +303,27 @@
     <tr><td><b>Button mushroom</b></td><td class="gram">~330 g</td><td>3.0 g</td><td><span class="tag lo">Very low</span></td></tr>
   </table></div>
 </section>
- 
+
 <!-- ===== TRAIN ===== -->
 <section id="s-train" class="screen">
   <div class="eyebrow">Part 4 · Training</div>
   <h2 class="title">Weekly blueprint</h2>
   <p class="sub">Priorities and step targets at a glance. Today's row is highlighted.</p>
   <div class="card flush"><table class="wk" id="wkTable"></table></div>
- 
+
   <h3 style="font-size:1.02rem;margin:16px 0 9px">Daily breakdown</h3>
   <p class="sub" style="margin-top:-4px">Tap a day to open. On lift days, log every set — weight, reps, and any change between sets. On cardio days, mark whether it was a walk or a run/jog session. Everything here feeds straight into your Stats history.</p>
   <div id="accWrap"></div>
- 
+
   <div class="callout amber" style="margin-top:4px"><b>Steps by day:</b> heavy leg/posterior 7–9k · upper &amp; easy-run days 8–11k · long-run day don't chase extra · poor sleep / period week cut 1–2k.</div>
 </section>
- 
+
 <!-- ===== RUN ===== -->
 <section id="s-run" class="screen">
   <div class="eyebrow">Part 5 · Running</div>
   <h2 class="title">Monthly calendar to 10K</h2>
   <p class="sub">Gentle build from your real <b>2 km</b> base. Run each session in its colour-coded zone — never start a run faster than easy.</p>
- 
+
   <h3 style="font-size:.95rem;margin-bottom:8px">Your personal heart-rate zones</h3>
   <p class="sub" style="margin-top:-3px;margin-bottom:9px">Based on your max HR of <b>191 bpm</b> (32F).</p>
   <table class="hrtbl">
@@ -332,7 +332,7 @@
     <tr><td><span class="zchip z3">Z3</span></td><td>70–80%</td><td>134–153</td><td>Tempo · ~6:00–6:30/km</td></tr>
     <tr><td><span class="zchip z4">Z4</span></td><td>80–90%</td><td>153–172</td><td>Intervals · ~5:30/km</td></tr>
   </table>
- 
+
   <div class="zleg">
     <span class="z z2"><b>Z2 Easy / Long</b> · 115–134 bpm · ~7:30/km</span>
     <span class="z z3"><b>Z3 Tempo</b> · 134–153 bpm · ~6:00–6:30/km</span>
@@ -342,13 +342,13 @@
   <div id="calWrap"></div>
   <div class="note">Starts at your current 2 km and builds gently (~10–15%/week): weekly volume ~8 → 10 → 13 → 14 km, peaking at an 8–10 km test on the final Saturday. Keep long runs away from Mon/Sun leg &amp; posterior days; fuel your runs. Log every cardio session on the Train tab — walk or run — so it lands in Stats.</div>
 </section>
- 
+
 <!-- ===== STATS ===== -->
 <section id="s-stats" class="screen">
   <div class="eyebrow">Body stats</div>
   <h2 class="title">Track the trend</h2>
   <p class="sub">Everything you log lives here: daily weight, weekly EVOLT, sleep &amp; HR, steps, weekly measurements, and your full lift history from the Train tab.</p>
- 
+
   <div class="statseg" id="statTabs">
     <button class="on" data-stat="weight">Weight</button>
     <button data-stat="steps">Steps</button>
@@ -357,7 +357,7 @@
     <button data-stat="lifts">Lifts</button>
     <button data-stat="cardio">Cardio log</button>
   </div>
- 
+
   <!-- WEIGHT PANEL -->
   <div id="panel-weight" class="statpanel">
     <div class="seg" id="metricSeg"><button class="on" data-metric="wt">Weight</button><button data-metric="bf">Body fat %</button><button data-metric="smm">Muscle</button><button data-metric="tee">TEE</button></div>
@@ -379,7 +379,7 @@
       <button class="addbtn" id="addEvolt">Add EVOLT entry</button>
     </div>
   </div>
- 
+
   <!-- STEPS PANEL -->
   <div id="panel-steps" class="statpanel" style="display:none">
     <div class="card"><div id="chartSteps"></div><div id="chartmetaSteps" class="chmeta"></div></div>
@@ -390,7 +390,7 @@
       <p class="sub" style="margin:9px 0 0">Target today: <b id="stepsTargetTxt">—</b></p>
     </div>
   </div>
- 
+
   <!-- SLEEP PANEL -->
   <div id="panel-sleep" class="statpanel" style="display:none">
     <div class="card"><div id="chartSleep"></div><div id="chartmetaSleep" class="chmeta"></div></div>
@@ -405,7 +405,7 @@
       <button class="addbtn" id="addSleep">Log sleep</button>
     </div>
   </div>
- 
+
   <!-- MEASUREMENTS PANEL -->
   <div id="panel-measure" class="statpanel" style="display:none">
     <div class="card"><div id="chartMeasure"></div><div id="chartmetaMeasure" class="chmeta"></div></div>
@@ -419,33 +419,33 @@
       <button class="addbtn" id="addMeasure">Log measurements</button>
     </div>
   </div>
- 
+
   <!-- LIFTS PANEL -->
   <div id="panel-lifts" class="statpanel" style="display:none">
     <p class="sub" style="margin-top:0">Every set you log on the Train tab appears here automatically, grouped by exercise, most recent first — your real strength progression.</p>
     <div id="liftHistory"></div>
   </div>
- 
+
   <!-- CARDIO PANEL -->
   <div id="panel-cardio" class="statpanel" style="display:none">
     <p class="sub" style="margin-top:0">Cardio sessions logged from the Train tab — walk vs run/jog, distance and duration where entered.</p>
     <div id="cardioHistory"></div>
   </div>
- 
+
   <div class="card flush" id="statListWrap" style="margin-top:13px">
     <div class="grp" style="background:#F1F4F9;color:var(--soft)">Recent entries — all types</div>
     <div id="statList"></div>
   </div>
- 
+
   <div class="card" style="margin-top:13px">
     <h3 style="font-size:.96rem;margin-bottom:4px">Where your data lives</h3>
     <p class="sub" style="margin:0 0 11px">Saved privately on this device, in this browser — no cloud, only you can see it. Export a backup weekly (especially on iPhone); import it to move to another phone or after clearing your browser.</p>
     <div class="bkrow"><button id="exportBtn">⬇ Export backup</button><label class="impbtn">⬆ Import<input type="file" id="importFile" accept="application/json" hidden></label></div>
   </div>
 </section>
- 
+
 </main>
- 
+
 <nav class="tabs">
   <button class="tab on" data-tab="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H4a1 1 0 0 1-1-1z"/></svg>Today</button>
   <button class="tab" data-tab="eat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v7a2 2 0 0 0 4 0V2M8 9v13M18 2c-2 0-3 2-3 5s1 4 3 4M18 2v20"/></svg>Eat</button>
@@ -453,7 +453,7 @@
   <button class="tab" data-tab="run"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="4.5" r="2"/><path d="M14 8l-3 3 2 4-4 5M11 11l-4 1-2 4M13 15l4 2 1 4"/></svg>Run</button>
   <button class="tab" data-tab="stats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 13l3-3 3 3 5-6"/></svg>Stats</button>
 </nav>
- 
+
 <script>
 var S={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
        set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
@@ -461,7 +461,7 @@ function keyFor(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,
 function todayKey(){return keyFor(new Date())}
 function ms(d){return new Date(d+'T00:00:00').getTime()}
 function sbd(a){return a.slice().sort(function(x,y){return x.date<y.date?-1:1})}
- 
+
 var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 var plan={
  1:{type:'lift',badge:'LIFT',name:'Leg day',pr:'Glutes + hamstrings + quad balance',time:'45–60 min',steps:'7,000–9,000',food:'Training / Run day',
@@ -507,7 +507,7 @@ var plan={
     ]}
 };
 var CHECK=[['protein','Protein ~140 g hit'],['carbs','Carbs around training'],['session','Completed today\u2019s session'],['steps','Hit step target'],['sleep','7 h+ sleep'],['water','Water + electrolytes']];
- 
+
 var FOOD={
  training:{cls:'',tgt:'<b>Training-day target:</b> 130–140 g protein · 180–230 g carbs · 45–55 g fat. If output feels flat, add 20–40 g carbs around training before cutting food.',macro:['2,050','140g','250g','55g'],
   rows:[['0 · Pre-workout / optional carb',[['Black coffee + electrolytes','1 cup','Hydration + focus','0 g'],['Banana / date / rice cake','80g / 20g / 1pc','Leg, run, poor-sleep days','0–1 g']]],
@@ -522,7 +522,7 @@ var FOOD={
         ['4 · Dinner',[['Tempeh','80 g','Dense protein','15–17 g'],['Egg whites / tofu add-on','200–300 g','Close protein gap','15–22 g'],['Vegetables / salad','250–300 g','Fibre + volume','3–6 g'],['½ avocado / olive oil','60 g / 10 g','Satiety + hormones','1–2 g'],['Greek yogurt (if short)','100–150 g','Protein top-up','8–15 g']]],
         ['Evening',[['Turmeric–ashwagandha latte','1 cup','Recovery + wind-down','0–2 g']]]]}
 };
- 
+
 var DAILY_TOTALS=[
   ['Egg whites (cooked)','~400–450 g','~400 g','Protein'],
   ['Whole egg','1–2 eggs','2 eggs','Protein + fat'],
@@ -552,12 +552,12 @@ var CAL=[
  ['W3',[Lc,['Tue','Easy 3 km','z2'],Bc,['Thu','4×600 m','z4'],SHc,['Sat','Long 6.5 km','z2'],POc]],
  ['W4',[['Mon','Leg lite','lift'],['Tue','Easy 3 km','z2'],Bc,['Thu','4×400 m','z4'],['Fri','Rest','rest'],['Sat','8–10 km test','race'],POc]]
 ];
- 
+
 var MEASURES=[
  ['bellybutton','Belly button'],['hipbone','Hip bone'],['waist','Waist'],['butt','Butt'],
  ['thigh','Thigh (33cm mark)'],['arm','Arm (20cm mark)'],['calf','Calf'],['bust','Bust'],['underbust','Underbust']
 ];
- 
+
 /* ---- TODAY ---- */
 var now=new Date(),dow=now.getDay(),tp=plan[dow];
 document.getElementById('dow').textContent=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][dow];
@@ -566,7 +566,7 @@ document.getElementById('hType').textContent=tp.type==='run'?'Today · Run day':
 document.getElementById('hName').textContent=tp.name;
 document.getElementById('hPr').textContent=tp.pr;
 document.getElementById('hMeta').innerHTML='<div class="pill">Time<b>'+tp.time+'</b></div><div class="pill">Steps<b>'+tp.steps+'</b></div><div class="pill">Fuel<b>'+tp.food+'</b></div>';
- 
+
 function renderSummary(){
   var td=todayKey();
   var loggedStep=(S.get('steps',[])||[]).filter(function(s){return s.date===td})[0];
@@ -580,7 +580,7 @@ function renderSummary(){
   else{var days=Math.floor((Date.now()-new Date(last).getTime())/86400000),left=7-days;
     document.getElementById('sumScan').innerHTML=(left<=0?'Due now':left+'<small> day'+(left>1?'s':'')+'</small>');}
 }
- 
+
 var clWrap=document.getElementById('checklist');
 var dayData=S.get('day:'+todayKey(),{});
 function renderCheck(){
@@ -610,7 +610,7 @@ function updateStreak(){
 renderCheck();updateRing();updateStreak();renderSummary();
 var QUOTES=["Train hard, recover harder. Growth happens in rest, not just reps.", "You didn’t come this far to only come this far. Keep going.", "Progress is progress, no matter how small. You showed up — that counts.", "Fuel well. Sleep well. Lift well. Repeat. The formula never changes.", "Your future physique is built in moments like this one. Stay consistent.", "One degree better every day. Compound interest applies to fitness too.", "Soreness is weakness leaving. Fatigue is progress arriving. Trust the process.", "Protein first, carbs for fuel, rest for growth. You know the formula. Execute.", "Every set logged is a data point toward the 2027 stage. Make it count.", "Champions are built in the quiet mornings when no one is watching.", "Discipline is choosing between what you want now and what you want most.", "Recovery is training. Sleep is a PR. Eat to perform, not to punish.", "The stage doesn’t remember how you felt — only what you built. Build.", "Strong, lean, capable. That’s the goal. Today’s session is one brick.", "You’re not just training for HYROX. You’re training for your best self.", "Consistency beats perfection every time. Show up imperfectly. Always.", "The body achieves what the mind believes. Believe in the process today.", "WNBF 2027. Every rep, every meal, every night of sleep is a vote for that goal.", "Don’t compare today to someone else’s highlight reel. Compare to yesterday’s you.", "Rest days are when the muscle actually grows. Honour them as much as lift days.", "Eat the carbs. They spare the protein. They fuel the training. Eat the carbs.", "Track it, trust it, improve it. Data doesn’t lie — your effort shows.", "A 1% improvement each week is 52% better by year end. Small steps compound.", "Your HYROX partner needs you strong. Build the engine now.", "The difference between good and great is one more degree of effort. Apply it.", "Breathe. Log it. Move on. One day, one session, one meal at a time.", "You earned yesterday’s rest. Now earn tomorrow’s results. Let’s go.", "Symmetry, balance, power. That’s the Figure package you’re building."];
 (function(){var q=QUOTES[new Date().getDate()%QUOTES.length];var el=document.getElementById('dailyQuote');if(el)el.textContent=q;})();
- 
+
 /* ---- EAT ---- */
 function renderFood(which){
   var f=FOOD[which];
@@ -631,18 +631,18 @@ function renderFood(which){
 }
 document.querySelectorAll('#foodSeg button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#foodSeg button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');renderFood(b.dataset.food);};});
 renderFood('training');
- 
+
 /* ---- TRAIN ---- */
 var order=[1,2,3,4,5,6,0];
 var wkH='<tr><th>Day</th><th>Session</th><th>Steps</th></tr>';
 order.forEach(function(d){var p=plan[d];wkH+='<tr class="'+(d===dow?'now':'')+'"><td class="d">'+DOW[d]+'</td><td><span class="dot '+p.type+'"></span>'+p.name+'<br><span style="font-size:.66rem;color:var(--soft)">'+p.pr+'</span></td><td class="st">'+p.steps+'</td></tr>';});
 document.getElementById('wkTable').innerHTML=wkH;
- 
+
 if(S.get('lifts',null)==null)S.set('lifts',[]);
 if(S.get('cardio',null)==null)S.set('cardio',[]);
- 
+
 function liftKey(d,exName){return 'lift:'+d+':'+exName.replace(/\s+/g,'_')}
- 
+
 function saveLiftSets(dateKey,dow,exName,sets){
   var arr=S.get('lifts',[]).filter(function(x){return !(x.date===dateKey&&x.ex===exName)});
   if(sets.length)arr.push({date:dateKey,dow:dow,ex:exName,sets:sets});
@@ -653,7 +653,7 @@ function saveCardio(dateKey,dow,sessionName,kind,detail){
   arr.push({date:dateKey,dow:dow,session:sessionName,kind:kind,detail:detail});
   S.set('cardio',arr);
 }
- 
+
 var accWrap=document.getElementById('accWrap');
 function buildSetsBox(box,exName,dateKey){
   box.innerHTML='';
@@ -856,16 +856,16 @@ order.forEach(function(d){var p=plan[d];
   accWrap.appendChild(acc);
   if(acc.classList.contains('open'))setTimeout(function(){bd.style.maxHeight=bd.scrollHeight+'px';},30);
 });
- 
+
 /* wiring now inline in accordion build loop */
- 
+
 /* ---- RUN ---- */
 var calH='';
 CAL.forEach(function(w){calH+='<div class="wkblock"><div class="wktag">'+w[0]+'</div><div class="days">';
   w[1].forEach(function(c){calH+='<div class="cell '+c[2]+'"><div class="dl">'+c[0]+'</div><div class="ac">'+c[1]+'</div></div>';});
   calH+='</div></div>';});
 document.getElementById('calWrap').innerHTML=calH;
- 
+
 /* ---- STATS: tab switching ---- */
 document.querySelectorAll('#statTabs button').forEach(function(b){
   b.onclick=function(){
@@ -880,7 +880,7 @@ document.querySelectorAll('#statTabs button').forEach(function(b){
     renderList();
   };
 });
- 
+
 /* ---- WEIGHT chart ---- */
 var curMetric='wt';
 if(S.get('evolt',null)==null){S.set('evolt',[
@@ -893,7 +893,7 @@ if(S.get('daily',null)==null)S.set('daily',[]);
 if(S.get('sleep',null)==null)S.set('sleep',[]);
 if(S.get('measurements',null)==null)S.set('measurements',[]);
 if(S.get('steps',null)==null)S.set('steps',[]);
- 
+
 function lineChart(elId,legId,metaId,series,unit,name){
   var el=document.getElementById(elId),lg=legId?document.getElementById(legId):null,meta=document.getElementById(metaId);
   var allPts=[];series.forEach(function(s){allPts=allPts.concat(s.pts)});
@@ -920,7 +920,7 @@ function lineChart(elId,legId,metaId,series,unit,name){
   if(pts.length){var f=pts[0].v,l=pts[pts.length-1].v,dl=l-f,ar=dl>0?'▲':dl<0?'▼':'●';
     meta.innerHTML='<span>'+(name||mainS.label)+' · '+pts.length+' pts</span><span><b>'+l+unit+'</b> latest · '+ar+' '+Math.abs(dl).toFixed(1)+unit+' since '+pts[0].date.slice(5)+'</span>';}
 }
- 
+
 function renderChart(){
   var daily=sbd(S.get('daily',[])),evolt=sbd(S.get('evolt',[])),series=[],unit='';
   if(curMetric==='wt'){
@@ -1025,7 +1025,7 @@ document.getElementById('addEvolt').onclick=function(){
 };
 document.querySelectorAll('#metricSeg button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#metricSeg button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');curMetric=b.dataset.metric;renderChart();};});
 renderChart();renderList();
- 
+
 /* ---- SLEEP ---- */
 function renderSleepChart(){
   var sl=sbd(S.get('sleep',[]));
@@ -1041,7 +1041,7 @@ document.getElementById('addSleep').onclick=function(){
   cancelEdit('sl');renderSleepChart();renderList();renderSummary();
 };
 renderSleepChart();
- 
+
 /* ---- STEPS ---- */
 function renderStepsChart(){
   var st=sbd(S.get('steps',[]));
@@ -1059,7 +1059,7 @@ document.getElementById('addSteps').onclick=function(){
   cancelEdit('st');renderStepsChart();renderList();renderSummary();
 };
 renderStepsChart();
- 
+
 /* ---- MEASUREMENTS ---- */
 var curMeasure='waist';
 (function(){var seg=document.getElementById('measureSeg');
@@ -1088,7 +1088,7 @@ document.getElementById('addMeasure').onclick=function(){
   renderMeasureChart();renderList();
 };
 renderMeasureChart();
- 
+
 /* ---- CARDIO + HYROX HISTORY ---- */
 function renderCardioHistory(){
   try{
@@ -1140,7 +1140,7 @@ function renderCardioHistory(){
   }
   }catch(e){console.error('renderCardioHistory:',e);}
 }
- 
+
 /* ---- LIFT HISTORY ---- */
 function renderLiftHistory(){
   var lifts=S.get('lifts',[]),byEx={};
@@ -1188,11 +1188,11 @@ function renderLiftHistory(){
     el.appendChild(wrap);
   });
 }
- 
+
 /* ---- backup ---- */
 document.getElementById('exportBtn').onclick=function(){var all={};for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);all[k]=localStorage.getItem(k);}var blob=new Blob([JSON.stringify(all)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='figure2027-backup-'+todayKey()+'.json';document.body.appendChild(a);a.click();a.remove();};
 document.getElementById('importFile').onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);Object.keys(o).forEach(function(k){localStorage.setItem(k,o[k]);});location.reload();}catch(err){alert('Could not read that backup file.');}};r.readAsText(f);};
- 
+
 /* ---- TABS ---- */
 (function(){
   var tabs=document.querySelectorAll('.tab');
